@@ -12,7 +12,13 @@ class Product(models.Model):
     description = models.TextField(max_length=500, blank=True)
     price = models.IntegerField()
     images = models.ImageField(upload_to='photos/products')
-    stock = models.IntegerField()
+    duration_days = models.PositiveIntegerField(default=1, verbose_name='Duración (días)')
+    departure_date = models.DateField(null=True, blank=True, verbose_name='Fecha de salida')
+    return_date = models.DateField(null=True, blank=True, verbose_name='Fecha de regreso')
+    accommodation = models.CharField(max_length=150, default='Alojamiento por confirmar', verbose_name='Alojamiento')
+    transport = models.CharField(max_length=150, default='Transporte por confirmar', verbose_name='Transporte')
+    itinerary = models.TextField(max_length=1000, default='Itinerario por confirmar', verbose_name='Itinerario')
+    available_spots = models.PositiveIntegerField(default=1, verbose_name='Cupos disponibles')
     is_available = models.BooleanField(default=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     created_date = models.DateTimeField(auto_now_add=True)
@@ -39,6 +45,21 @@ class Product(models.Model):
         if reviews['count'] is not None:
             count = int(reviews['count'])
         return count
+
+
+class Favorite(models.Model):
+    user = models.ForeignKey(Account, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['user', 'product'], name='unique_user_product_favorite')
+        ]
+        ordering = ('-created_at',)
+
+    def __str__(self):
+        return f'{self.user.email} - {self.product.product_name}'
 
 
 class VariationManager(models.Manager):

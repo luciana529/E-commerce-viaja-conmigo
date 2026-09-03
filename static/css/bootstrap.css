@@ -1,28 +1,28 @@
 @charset "UTF-8";
 :root {
-  --blue: #3167eb;
+  --blue: #0066CC;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
   --red: #fa3434;
   --orange: #ff9017;
   --yellow: #ffc107;
-  --green: #00b517;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
+  --green: #00BCD4;
+  --teal: #00BCD4;
+  --cyan: #00BCD4;
+  --white: #FFFFFF;
   --gray: #545454;
   --gray-dark: #343a40;
   --gray-light: #969696;
-  --primary: #3167eb;
-  --secondary: #545454;
-  --success: #00b517;
-  --info: #17a2b8;
+  --primary: #0066CC;
+  --secondary: #00BCD4;
+  --success: #00BCD4;
+  --info: #00BCD4;
   --warning: #ff9017;
   --danger: #fa3434;
   --light: #e4e4e4;
   --dark: #212529;
-  --primary-light: #5f89f0;
+  --primary-light: #338fe6;
   --gray: #545454;
   --gray-light: #969696;
   --breakpoint-xs: 0;
@@ -30,7 +30,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Inter", Arial, "Helvetica Neue", "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: "Roboto", Arial, "Helvetica Neue", "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -53,7 +53,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Inter", Arial, "Helvetica Neue", "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto", Arial, "Helvetica Neue", "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -5671,7 +5671,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Inter", Arial, "Helvetica Neue", "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto", Arial, "Helvetica Neue", "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5773,7 +5773,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Inter", Arial, "Helvetica Neue", "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto", Arial, "Helvetica Neue", "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;

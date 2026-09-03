@@ -32,8 +32,16 @@
   }
 
   .section-header .logo {
-    max-height: 40px;
-    width: auto;
+    max-height: 180px;
+    max-width: calc(100vw - 30px);
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+  }
+  .section-header .brand-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
   }
   .section-header .header-main .brand-wrap {
     margin-bottom: 1rem;

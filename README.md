@@ -2,9 +2,9 @@
 <p align="center">
   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Logo.png" alt="Logo" style="width: 30%; max-width: 200px;">
 </p>
-<h5 align="center">ByteShop: Tu destino para compras online</h5>
+<h5 align="center">Viaja Conmigo: Tu destino para compras online</h5>
 
-ByteShop es un proyecto de e-commerce desarrollado en Django, que ofrece una experiencia de compra en línea dinámica y completa. Descubre una amplia variedad de productos, gestiona tus compras y maneja tu cuenta a tu gusto, todo en un sitio web intuitivo y fácil de usar.
+Viaja Conmigo es un proyecto de e-commerce desarrollado en Django, que ofrece una experiencia de compra en línea dinámica y completa. Descubre una amplia variedad de productos, gestiona tus compras y maneja tu cuenta a tu gusto, todo en un sitio web intuitivo y fácil de usar.
 
 ## ¿En qué consiste?
 
@@ -79,7 +79,7 @@ python manage.py runserver
 
 Para acceder al área de administración, sigue los siguientes pasos:
 
-El sistema mediante el cual se maneja con localhost:8000/securelogin, para poder acceder a la ventana de administrador necesitas crear una cuenta desde la CMD o BASH utilizando `winpty python manage.py createsuperuser` para crear super usuario.
+El panel de administración está disponible en `localhost:8000/admin/`. La ruta anterior `localhost:8000/securelogin/` redirige automáticamente al nuevo acceso. Para acceder necesitas crear una cuenta desde la CMD o BASH utilizando `python manage.py createsuperuser` para crear un superusuario.
 
 <p align="center">
   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Django-Main.png" alt="Main Django" style="width: 50%; max-width: 200px;">

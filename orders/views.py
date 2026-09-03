@@ -47,7 +47,7 @@ def payments(request):
         orderproduct.save()
 
         product = Product.objects.get(id=item.product_id)
-        product.stock -= item.quantity
+        product.available_spots -= item.quantity
         product.save()
 
     CartItem.objects.filter(user=request.user).delete()

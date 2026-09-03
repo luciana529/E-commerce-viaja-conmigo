@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Product, ReviewRating, ProductGallery
+from .models import Product, ReviewRating, ProductGallery, Favorite
 from category.models import Category
 from carts.models import CartItem
 from carts.views import _cart_id
@@ -7,6 +7,7 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db.models import Q
 from .forms import ReviewForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from orders.models import OrderProduct
 
 
@@ -30,9 +31,14 @@ def store(request, category_slug=None):
         product_count = products.count()
 
 
+    favorite_product_ids = set()
+    if request.user.is_authenticated:
+        favorite_product_ids = set(Favorite.objects.filter(user=request.user).values_list('product_id', flat=True))
+
     context = {
         'products' : paged_products,
         'product_count' : product_count,
+        'favorite_product_ids': favorite_product_ids,
     }
 
     return render(request, 'store/store.html', context)
@@ -76,9 +82,14 @@ def search(request):
         if keyword:
             products = Product.objects.order_by('-created_date').filter(Q(description__icontains=keyword) | Q(product_name__icontains=keyword))
             product_count = products.count()
+    favorite_product_ids = set()
+    if request.user.is_authenticated:
+        favorite_product_ids = set(Favorite.objects.filter(user=request.user).values_list('product_id', flat=True))
+
     context = {
         'products': products,
         'product_count': product_count,
+        'favorite_product_ids': favorite_product_ids,
     }
 
     return render(request, 'store/store.html', context)
@@ -106,3 +117,21 @@ def submit_review(request, product_id):
                 data.save()
                 messages.success(request, 'Muchas gracias!, tu comentario ha sido publicado.')
                 return redirect(url)
+
+
+@login_required(login_url='login')
+def toggle_favorite(request, product_id):
+    product = get_object_or_404(Product, id=product_id, is_available=True)
+    favorite, created = Favorite.objects.get_or_create(user=request.user, product=product)
+    if not created:
+        favorite.delete()
+    return redirect(request.META.get('HTTP_REFERER', 'store'))
+
+
+@login_required(login_url='login')
+def favorites(request):
+    favorite_products = Product.objects.filter(
+        favorite__user=request.user,
+        is_available=True,
+    ).order_by('-favorite__created_at')
+    return render(request, 'store/favorites.html', {'products': favorite_products})

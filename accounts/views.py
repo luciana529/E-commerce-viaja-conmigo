@@ -38,7 +38,7 @@ def register(request):
 
 
             current_site = get_current_site(request)
-            mail_subject = 'Activa tu cuenta en ByteShop para continuar'
+            mail_subject = 'Activa tu cuenta en Viaja Conmigo para continuar'
             body = render_to_string('accounts/account_verification_email.html', {
                 'user': user,
                 'domain': current_site,
@@ -158,7 +158,10 @@ def dashboard(request):
     orders = Order.objects.order_by('-created_at').filter(user_id=request.user.id, is_ordered=True)
     orders_count = orders.count()
 
-    userprofile = UserProfile.objects.get(user_id=request.user.id)
+    userprofile, created = UserProfile.objects.get_or_create(
+        user_id=request.user.id,
+        defaults={'profile_picture': 'default/default-user.png'},
+    )
 
     context = {
         'orders_count': orders_count,

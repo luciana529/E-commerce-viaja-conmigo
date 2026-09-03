@@ -40,38 +40,6 @@
           </article> <!-- filter-group  .// -->
           <article class="filter-group">
             <header class="card-header">
-              <a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" class="">
-                <i class="icon-control fa fa-chevron-down"></i>
-                <h6 class="title">Tamaños </h6>
-              </a>
-            </header>
-            <div class="filter-content collapse show" id="collapse_4" style="">
-              <div class="card-body">
-                <label class="checkbox-btn">
-                  <input type="checkbox">
-                  <span class="btn btn-light"> XS </span>
-                </label>
-
-                <label class="checkbox-btn">
-                  <input type="checkbox">
-                  <span class="btn btn-light"> SM </span>
-                </label>
-
-                <label class="checkbox-btn">
-                  <input type="checkbox">
-                  <span class="btn btn-light"> LG </span>
-                </label>
-
-                <label class="checkbox-btn">
-                  <input type="checkbox">
-                  <span class="btn btn-light"> XXL </span>
-                </label>
-              </div><!-- card-body.// -->
-            </div>
-          </article> <!-- filter-group .// -->
-
-          <article class="filter-group">
-            <header class="card-header">
               <a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
                 <i class="icon-control fa fa-chevron-down"></i>
                 <h6 class="title">Precios </h6>
@@ -132,7 +100,13 @@
               <div class="img-wrap">
 
 
-                <a href="{{ product.get_url }}"><img src="{{ product.images.url }}"></a>
+                <a href="{{ product.get_url }}"><img src="{{ product.images.url }}" alt="{{ product.product_name }}"></a>
+                <div class="rating-star mt-2" aria-label="Calificación: {{ product.averageReview }} de 5 estrellas">
+                  {% for star in "12345" %}
+                  <i class="fa fa-star{% if product.averageReview < forloop.counter %}-o{% endif %}" aria-hidden="true"></i>
+                  {% endfor %}
+                  <small>({{ product.countReview }})</small>
+                </div>
 
               </div> <!-- img-wrap.// -->
               <figcaption class="info-wrap">
@@ -143,6 +117,12 @@
                   </div> <!-- price-wrap.// -->
                 </div>
                 <a href="{% url 'add_cart' product.id %}" class="btn btn-block btn-success">Agregar al Carrito </a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'toggle_favorite' product.id %}" class="btn btn-block btn-outline-primary mt-2">
+                  <i class="fa fa-star{% if product.id not in favorite_product_ids %}-o{% endif %}"></i>
+                  {% if product.id in favorite_product_ids %}Quitar de favoritos{% else %}Agregar a favoritos{% endif %}
+                </a>
+                {% endif %}
               </figcaption>
             </figure>
           </div> <!-- col.// -->
