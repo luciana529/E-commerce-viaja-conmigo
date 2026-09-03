@@ -1,177 +1,306 @@
-# Ecommerce  
+# Viaja Conmigo 🌍✈️
+
 <p align="center">
-  <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Logo.png" alt="Logo" style="width: 30%; max-width: 200px;">
-</p>
-<h5 align="center">Viaja Conmigo: Tu destino para compras online</h5>
-
-Viaja Conmigo es un proyecto de e-commerce desarrollado en Django, que ofrece una experiencia de compra en línea dinámica y completa. Descubre una amplia variedad de productos, gestiona tus compras y maneja tu cuenta a tu gusto, todo en un sitio web intuitivo y fácil de usar.
-
-## ¿En qué consiste?
-
-Este proyecto es un e-commerce desarrollado en Django, un potente Framework de Python. El entorno virtual se ha configurado cuidadosamente para asegurar una experiencia de desarrollo óptima y segura. La tecnología utilizada incluye Python, JavaScript, HTML, Bootstrap/CSS, jQuery y MySQL. Todas las páginas del sitio web son dinámicas y ofrecen una experiencia interactiva a los usuarios.
-
-## Características destacadas
-
-- Administrador
-  * Agregar nuevos productos con información detallada, incluyendo nombre, categoría, imagen, precio, stock y disponibilidad.
-  * Gestionar las reviews de compradores previamente verificados, permitiendo visualizar el usuario que realizó la compra, su calificación, su reseña y el producto     evaluado.
-  * Ver las órdenes de productos, mostrando el número de orden, nombre del cliente, teléfono, email, ciudad, costo total, impuestos, estado y fecha de la orden.
-  * Acceder a información sobre los pagos de compras, incluyendo el usuario, PaymentID, método de pago, cantidad y estado de la transacción.
-  * Visualizar los productos solicitados por los clientes, junto con detalles como el pago, costo, usuario y variaciones del producto.
-
-- Categorías
-  * Agregar nuevas categorías para clasificar los productos y facilitar la navegación y búsqueda de los usuarios.
-
-- Carritos de compra
-  * Los usuarios pueden acceder a su carrito de compra, identificado por un cartID único.
-  * La sección "CartItems" muestra los elementos presentes en el carrito, incluyendo los productos seleccionados, el ID del carrito, la cantidad de cada producto y 
-    su disponibilidad.
-
-- Gestión de cuentas
-  * Utiliza el sistema de grupos proporcionado por Django para asignar roles con características específicas para el manejo del sistema.
-
-- Usuarios
-  * Los perfiles de usuarios contienen información relevante, como la imagen de perfil, nombre de usuario, país, ciudad y código postal.
-
-- Cuentas
-  * Sección que muestra información sobre las cuentas de los usuarios, incluyendo email, primer nombre, último nombre, nombre de usuario, última vez que se      conectó, fecha de registro y estado de la cuenta (activa o pendiente de confirmación por correo).
- 
-<p align="center">
-  <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Main_Page.png" alt="Main Page" style="width: 50%; max-width: 200px;">
+  <img src="https://via.placeholder.com/200" alt="Logo Viaja Conmigo" style="width: 30%; max-width: 200px;">
 </p>
 
-## Ejecución 
+<h5 align="center">Tu destino para experiencias de viaje inolvidables</h5>
 
-Es necesario tener instalado los requerimientos necesarios para ejecutarlo posteriormente con `python manage.py runserver` desde la terminal en el directorio de la carpeta clonada. Una vez realizado es necesario abrir localhost:8000 para visualizar el sistema.
+**Viaja Conmigo** es un e-commerce moderno desarrollado en Django que ofrece una experiencia completa de compra y reserva de paquetes turísticos. Descubre destinos exóticos, organiza tus vacaciones soñadas y disfruta de una plataforma intuitiva diseñada para viajeros como tú.
 
-### Instalación
+## 🎯 ¿En qué consiste?
 
-Para poder utilizar el proyecto o modificarlo puedes:
+Este proyecto es un e-commerce especializado en turismo y viajes, desarrollado con **Django Framework** en Python. Utiliza un entorno virtual configurado para desarrollo seguro y escalable. Las tecnologías incluyen Python, JavaScript, HTML, Bootstrap/CSS, jQuery y SQLite. Todas las páginas del sitio web son dinámicas e interactivas.
 
-1.- **Clonar el repositorio en tu máquina local:**
-`git clone https://github.com/Nivaniz/ecommerce.git`
-*(Hay que tener todos los requerimientos previamente instalados)*
+### Stack Tecnológico
+- **Backend:** Django (Python)
+- **Frontend:** HTML5, Bootstrap, CSS3, jQuery
+- **Base de Datos:** SQLite
+- **Autenticación:** JWT con Base64
+- **Pagos:** PayPal Sandbox (para testing)
+- **Email:** Gmail SMTP (para notificaciones)
 
-2.- **Crea un entorno virtual e instala las dependencias necesarias.**
+---
 
-3.- **Configura la base de datos y realiza las migraciones.**
+## ✨ Características Destacadas
 
-4.- **Ejecuta el servidor de desarrollo de Django.**
+### 🏢 Panel de Administrador
+- Gestionar paquetes turísticos con información detallada (destino, precio, duración, disponibilidad)
+- Ver y responder reseñas de clientes verificados
+- Administrar órdenes de reservas con detalles completos
+- Controlar transacciones de pago
+- Visualizar productos solicitados con variaciones
 
-5.- **Navegar en el directorio del proyecto:**
-`cd ecommerce`
+### 🗺️ Categorías de Viajes
+- Playas y resorts
+- Montaña y trekking
+- Ciudades y cultura
+- Aventura y extremo
+- Viajes familiares
+- Lujo y escapadas románticas
 
-6.- **Instalar las dependencias necesarias:**
-`pip install -r requirements.txt`
+### 🛒 Carrito de Compras Inteligente
+- Carrito persistente identificado por cartID único
+- Visualización de paquetes seleccionados
+- Control de cantidad y disponibilidad
+- Resumen dinámico de costos
 
-~~~
-git clone https://github.com/tu-usuario/ecomerce.git
-cd ecommerce
+### 👤 Gestión de Cuentas
+- Sistema de grupos y roles con Django
+- Perfiles de usuario con información personal
+- Historial de reservas y compras
+
+### 📧 Usuarios y Perfiles
+- Registro seguro con verificación por email
+- Perfiles personalizados con foto, ubicación, datos de contacto
+- Sistema de recuperación de contraseña
+- Información completa de cuenta
+
+### 💳 Carrito y Checkout
+- Agregar/eliminar paquetes
+- Ajustar cantidades antes de comprar
+- Resumen de compra detallado
+- Selección de dirección de envío
+
+### 💰 Pago Seguro
+- Integración con PayPal
+- Métodos de pago múltiples
+- Confirmación instantánea de transacción
+
+### ✅ Confirmación de Compra
+- Email de confirmación automático
+- Detalles de la reserva
+- Información de entrega/viaje
+- Número de pedido único
+
+---
+
+## 🚀 Instalación y Ejecución
+
+### Requisitos Previos
+- Python 3.11+
+- Git
+- pip (gestor de paquetes Python)
+
+### Pasos de Instalación
+
+1. **Clonar el repositorio:**
+```bash
+git clone https://github.com/tu-usuario/viaja-conmigo.git
+cd viaja-conmigo
+```
+
+2. **Crear entorno virtual:**
+```bash
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+source venv/bin/activate  # En Windows: venv\Scripts\activate
+```
+
+3. **Instalar dependencias:**
+```bash
 pip install -r requirements.txt
-python manage.py makemigrations
+```
+
+4. **Configurar variables de entorno:**
+
+Crea un archivo `.env` en la raíz del proyecto:
+```
+SECRET_KEY=tu-clave-secreta-aqui
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+EMAIL_HOST_USER=tu-email@gmail.com
+EMAIL_HOST_PASSWORD=tu-contraseña-app
+PAYPAL_CLIENT_ID=tu-paypal-client-id
+PAYPAL_SECRET=tu-paypal-secret
+```
+
+5. **Ejecutar migraciones:**
+```bash
 python manage.py migrate
+```
+
+6. **Crear superusuario (admin):**
+```bash
+python manage.py createsuperuser
+```
+
+7. **Ejecutar servidor de desarrollo:**
+```bash
 python manage.py runserver
-~~~
+```
 
-## Uso y cómo acceder al administrador
+Accede a: **http://127.0.0.1:8000/**
 
-Para acceder al área de administración, sigue los siguientes pasos:
+---
 
-El panel de administración está disponible en `localhost:8000/admin/`. La ruta anterior `localhost:8000/securelogin/` redirige automáticamente al nuevo acceso. Para acceder necesitas crear una cuenta desde la CMD o BASH utilizando `python manage.py createsuperuser` para crear un superusuario.
+## 📖 Uso y Acceso
 
-<p align="center">
-  <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Django-Main.png" alt="Main Django" style="width: 50%; max-width: 200px;">
-</p>
+### Para Usuarios
+1. Navega a **http://127.0.0.1:8000/**
+2. Registrate con tu email
+3. Verifica tu cuenta (revisa tu email)
+4. Inicia sesión
+5. Explora destinos y agrega paquetes al carrito
+6. Completa la compra
 
-### Ventanas del E-commerce
+### Para Administradores
+Accede al panel: **http://127.0.0.1:8000/admin/**
 
-La mayoría de las ventanas se pueden acceder sin tener una cuenta, pero para comprar y ver pedidos es necesario crear una.
-  
-- Registro e Inicio de Sesión:
-El sistema ofrece a los usuarios la posibilidad de registrarse y crear una cuenta utilizando su correo electrónico de Gmail. La cuenta se verifica mediante un proceso de codificación en Base64 para mayor seguridad. Además, los usuarios registrados pueden iniciar sesión fácilmente para acceder a todas las funcionalidades del sitio.
+Usa las credenciales creadas con `createsuperuser`.
 
-<p align="center">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Inicio_Sesión.png" alt="Inicio de Sesión" style="width: 40%;">
-    <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Registrarme.png" alt="Registrarme" style="width: 40%;">
- <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Correo.png" alt="Activar Cuenta" style="width: 40%;">
-</p>
+En el admin podrás:
+- Crear/editar/eliminar paquetes turísticos
+- Ver reseñas de clientes
+- Gestionar órdenes
+- Administrar usuarios
 
-- Sección de Olvidé mi Contraseña:
-En caso de que los usuarios olviden su contraseña, el e-commerce cuenta con una sección dedicada para restablecerla de forma segura. Los usuarios recibirán un correo electrónico con instrucciones para recuperar su contraseña y volver a acceder a su cuenta.
+---
 
-<p align="center">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Olvide_Contraseña.png" alt="Olvidé Contraseña" style="width: 40%;">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Recuperar.png" alt="Recuperar Cuenta" style="width: 40%;">
-</p>
+## 🏗️ Estructura del Proyecto
 
-- Sección de Categorías:
-La navegación y búsqueda de productos se simplifica gracias a la sección de categorías. Los usuarios pueden explorar y filtrar productos por categorías específicas, lo que facilita la búsqueda de artículos de su interés.
+```
+viaja-conmigo/
+├── accounts/           # Gestión de cuentas y autenticación
+│   ├── models.py       # Modelos de usuario y perfil
+│   ├── views.py        # Vistas de login/registro
+│   └── templates/
+├── store/              # Tienda y catálogo de viajes
+│   ├── models.py       # Productos (paquetes turísticos)
+│   ├── views.py        # Vistas de productos
+│   └── templates/
+├── carts/              # Carrito de compras
+│   ├── models.py       # Modelo del carrito
+│   └── views.py
+├── orders/             # Órdenes y reservas
+│   ├── models.py       # Modelo de órdenes
+│   └── views.py
+├── category/           # Categorías de viajes
+├── static/             # CSS, JS, imágenes
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── templates/          # Plantillas HTML
+├── media/              # Fotos de paquetes (subidas)
+│   └── photos/products/
+├── db.sqlite3          # Base de datos
+├── manage.py           # Gestor de Django
+├── requirements.txt    # Dependencias
+└── .env                # Variables de entorno (no versionado)
+```
 
-<p align="center">
-  <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Tienda_Main.png" alt="Tienda" style="width: 50%; max-width: 200px;">
-</p>
+---
 
-- Apartado de Búsqueda de Productos:
-Para una experiencia de compra más ágil, el e-commerce proporciona un apartado de búsqueda de productos. Los usuarios pueden ingresar palabras clave y encontrar rápidamente los productos que desean comprar.
+## 🎨 Personalización
 
-- Apartado de Mi Cuenta:
-Los usuarios tienen acceso a su área personal a través del apartado "Mi Cuenta". Aquí, pueden ver el historial de sus pedidos, revisar sus ordenes de compra anteriores, cambiar su contraseña para garantizar la seguridad y editar su perfil para mantener su información actualizada.
+### Cambiar Nombre de la Tienda
+- Edita `settings.py` para el nombre
+- Modifica `templates/base.html` para el navbar
+- Actualiza `templates/includes/footer.html`
 
-<p align="center">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Mi_Panel.png" alt="Mi panel" style="width: 40%;">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Orden_De_Compra.png" alt="Mis pedidos" style="width: 40%;">
-</p>
+### Cambiar Colores
+- Edita `static/css/custom.css`
+- Paleta actual: Azul (#0066CC) + Turquesa (#00BCD4) + Blanco
 
-<p align="center">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Editar_Perfil.png" alt="Editar Cuenta" style="width: 40%;">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Cambiar_Contraseña.png" alt="Editar constraseña" style="width: 40%;">
-</p>
+### Agregar Nuevos Paquetes
+1. Ve al admin: `/admin/store/product/`
+2. Haz clic en "Agregar producto"
+3. Completa información del destino
+4. Sube imagen del lugar
+5. Guarda
 
-- Carrito:
-El carrito de compra es una funcionalidad esencial en el e-commerce. Los usuarios pueden agregar productos seleccionados a su carrito, ver el resumen de sus compras y ajustar las cantidades antes de proceder al pago.
+---
 
-<p align="center">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Carrito.png" alt="Carrito" style="width: 40%;">
-</p>
+## 🔧 Configuración de Email (Gmail)
 
-- Dirección de Envío:
-Antes de finalizar la compra, los usuarios pueden proporcionar y verificar su dirección de envío para garantizar que los productos sean entregados correctamente.
+Para que funcione el envío de emails:
 
-<p align="center">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Dirección_Envio.png" alt="Dirección de Envio" style="width: 40%;">
-</p>
+1. Activa "Contraseñas de aplicación" en tu cuenta Google
+2. Genera una contraseña de app para Gmail
+3. Actualiza `.env`:
+```
+EMAIL_HOST_USER=tu-email@gmail.com
+EMAIL_HOST_PASSWORD=tu-contraseña-app-generada
+```
 
-- Pagar:
-El proceso de pago se lleva a cabo en una ventana dedicada, donde los usuarios pueden seleccionar el método de pago preferido y completar la transacción de forma segura.
+---
 
-<p align="center">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Pagar.png" alt="Pago" style="width: 40%;">
-</p>
+## 💳 Configuración de PayPal
 
-- Ventana de Venta Exitosa
-Una vez completada la transacción, los usuarios recibirán una ventana de venta exitosa que confirmará su compra y proporcionará detalles importantes, como el número de orden y la fecha estimada de entrega.
+Para testing con PayPal Sandbox:
 
-<p align="center">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Completed.png" alt="Compra exitosa" style="width: 40%;">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Cuenta_Pagado.png" alt="Cuenta Pagado" style="width: 40%;">
-</p>
+1. Crea cuenta en [PayPal Developer](https://developer.paypal.com)
+2. Obtén tu `Client ID` y `Secret`
+3. Actualiza `.env`:
+```
+PAYPAL_CLIENT_ID=tu-client-id
+PAYPAL_SECRET=tu-secret
+```
 
-<p align="center">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Cuenta_Recibido.png" alt="Cuenta Recibido" style="width: 40%;">
-   <img src="https://github.com/Nivaniz/ecommerce/blob/main/img-git/Compra_Correo.png" alt="Correo de Compra" style="width: 40%;">
-</p>
+---
 
-## Notas
+## 🐛 Solución de Problemas
 
-Por cuestiones de seguridad la funcionalidad de SECRET_KEY, y contraseñas especificas de correo como EMAIL_HOST_USER / PASSWORD están privadas en un archivo local .env. Es necesario que si quieres utilizarlo insertes tus credenciales necesarias para el correcto funcionamiento de la página accediendo a settings con contraseñas de acceso de los servicios de google gmail.
+### Las imágenes no cargan
+```bash
+python manage.py collectstatic
+```
 
-Para ver y realizar los págos por Paypal o tarjetas de crédito/débito (VISA) es necesario utilizar un Sandbox desde Paypal y tener una cuenta como desarrollador.
+### Error de módulo faltante
+```bash
+pip install -r requirements.txt
+```
 
-## Autoría
+### Error de base de datos
+```bash
+python manage.py migrate
+```
 
-¡Tus contribuciones son bienvenidas! Si encuentras errores o mejoras para el proyecto, no dudes en enviar tus pull requests. Si tienes alguna pregunta o comentario, puedes encontrarme y visitar mi sitio web https://codingwithnirvana.pythonanywhere.com.
+---
 
-Espero que esta versión del README sea útil.
-Creado por **Nirvana Belen González López** 
+## 📝 Notas de Seguridad
+
+⚠️ **IMPORTANTE:**
+- Nunca compartas tu archivo `.env` en GitHub
+- Cambia `SECRET_KEY` en producción
+- Establece `DEBUG=False` en producción
+- Usa variables de entorno para credenciales
+- Habilita HTTPS en producción
+
+---
+
+## 🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! Si encuentras bugs o tienes mejoras:
+
+1. Fork el proyecto
+2. Crea una rama (`git checkout -b feature/AmazingFeature`)
+3. Commit cambios (`git commit -m 'Add AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo licencia MIT. Ver archivo `LICENSE` para detalles.
+
+---
+
+## 👨‍💻 Autor
+
+**Luciana Ramirez**
+
+- Email: lucianaramirez3012@gmail.com
+- Portfolio: https://lucianaramirezsystems.lovable.app
+
+---
+
+## 📞 Soporte
+
+¿Preguntas o problemas? Contáctame:
+- Email: lucianaramirez3012@gmail.com
+
+
+---
+
+**¡Que disfrutes creando experiencias de viaje increíbles! 🌴✈️🏖️**
