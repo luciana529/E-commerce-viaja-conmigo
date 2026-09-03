@@ -1,8 +1,7 @@
 # Viaja Conmigo 🌍✈️
 
 <p align="center">
-  <img src="[https://github.com/luciana529/E-commerce-viaja-conmigo/blob/modificaciones-tp-1b/static/images/logo-viaja-conmigo.jpg]" alt="Logo Viaja Conmigo" style="width: 30%; max-width: 200px;">
-</p>
+  <img src="static/images/logo02.jpg" alt="Logo Viaja Conmigo" style="width: 30%; max-width: 200px;"> 
 
 <h5 align="center">Tu destino para experiencias de viaje inolvidables</h5>
 
