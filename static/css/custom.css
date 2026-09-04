@@ -4,14 +4,16 @@ body {
 }
 
 body {
-  background: linear-gradient(180deg, #eaf8fc 0%, #dff4fa 100%);
+  background: #0066CC;
   background-attachment: fixed;
 }
 
 .section-content,
 .section-pagetop,
-.section-name {
-  background-color: transparent;
+.section-name,
+.bg {
+  background: #0066CC !important;
+  background-color: #0066CC !important;
 }
 
 .card,
