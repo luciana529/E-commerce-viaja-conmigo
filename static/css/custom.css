@@ -1,3 +1,29 @@
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, #eaf8fc 0%, #dff4fa 100%);
+  background-attachment: fixed;
+}
+
+.section-content,
+.section-pagetop,
+.section-name {
+  background-color: transparent;
+}
+
+.card,
+.section-header,
+.section-footer {
+  background-color: #FFFFFF;
+}
+
+.card {
+  border-color: rgba(0, 102, 204, 0.12);
+}
+
 .rate > input {
   display: none;
 }
