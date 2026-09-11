@@ -21,6 +21,9 @@ from . import views
 from django.conf.urls.static import static
 from django.conf import settings
 
+from django.views.static import serve
+from django.urls import re_path
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('securelogin/', RedirectView.as_view(url='/admin/', permanent=False)),
@@ -30,3 +33,7 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('orders/', include('orders.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# Permitir servir imágenes de media en producción (Render)
+urlpatterns += [
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+]
